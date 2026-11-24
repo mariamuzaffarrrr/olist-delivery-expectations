@@ -26,3 +26,10 @@ Source: [paste the Kaggle link here]. The raw files are not included in this rep
 
 ## AI Log
 See [docs/ai_log.md](docs/ai_log.md) for where AI helped and where it was wrong.
+
+## Metric definitions
+- **Actual days:** days from purchase to delivery to the customer (dates only, times ignored).
+- **Promised days:** days from purchase to the estimated delivery date shown at purchase.
+- **Days early:** estimated delivery date minus actual delivery date. Positive = early, 0 = on the promised day, negative = late.
+- **Late order:** days early below 0.
+- **Negative review:** review score of 1 or 2 (draft, may change).
