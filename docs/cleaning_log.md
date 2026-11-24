@@ -19,3 +19,9 @@ Every data-cleaning decision goes here: what I found, what I did, and why.
 - **Did:** Nothing yet. These orders can't be used for the review analysis, so they'll be excluded from it but kept in the order funnel.
 - **Why:** With no review score, there's nothing to compare against delivery performance.
 - **Impact:** About 0.8% of orders. Worth checking later whether they differ from the rest (for example, canceled orders)
+
+### Orders excluded from the delivery analysis
+- **Found:** Of 99,441 orders, 96,478 are delivered. The other 2,963 are shipped (1,107), canceled (625), unavailable (609), invoiced (314), processing (301), created (5) or approved (2). 8 of the delivered orders have no delivery date.
+- **Did:** Kept only delivered orders with a delivery date (96,470) for the delivery analysis. The other statuses stay in the order funnel.
+- **Why:** The gap between promised and actual dates can't be measured without an arrival date. The data is a snapshot, so some shipped orders probably arrived later, but that isn't recorded.
+- **Impact:** About 3% of orders excluded. Delivered orders with no review are also dropped from the review analysis: [fill in the number after Step 3].
