@@ -25,3 +25,9 @@ Every data-cleaning decision goes here: what I found, what I did, and why.
 - **Did:** Kept only delivered orders with a delivery date (96,470) for the delivery analysis. The other statuses stay in the order funnel.
 - **Why:** The gap between promised and actual dates can't be measured without an arrival date. The data is a snapshot, so some shipped orders probably arrived later, but that isn't recorded.
 - **Impact:** About 3% of orders excluded. Delivered orders with no review are also dropped from the review analysis: 647 delivered orders have no review.
+
+### Extreme delivery times and delays
+- **Found:** The longest delivery took 208 days, and the largest delay was 188 days. 283 orders took over 60 days, and 1,335 were more than 14 days late. No negative durations.
+- **Did:** Kept all of them.
+- **Why:** They look like real bad experiences, not data errors, and they're part of what this project studies.
+- **Impact:** Under 2% of orders. I'll rerun the main test without them to check the conclusions don't depend on them.
